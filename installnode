@@ -1,0 +1,11 @@
+#!/bin/bash
+pathchecker=$(which node)
+path=/usr/bin/node
+
+if [  $path -ef $pathchecker ]
+then
+    echo "node is present no need to install"
+else
+    echo "attempting to install node please hold on tight"
+    sudo apt update && sudo apt-get install -y nodejs
+fi
